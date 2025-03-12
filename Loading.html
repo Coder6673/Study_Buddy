@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .loading-spinner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #00FFFF, #FF00FF); /* Cyan to Magenta gradient */
+        }
+
+        .spinner {
+            width: 100px;
+            height: 100px;
+            animation: rotate 2s linear infinite;
+        }
+
+        .path {
+            stroke: #FFFFFF; /* White stroke color for visibility */
+            stroke-linecap: round;
+            stroke-dasharray: 150;
+            stroke-dashoffset: 0;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dashoffset: 150;
+            }
+            50% {
+                stroke-dashoffset: 0;
+                transform: rotate(180deg);
+            }
+            100% {
+                stroke-dashoffset: -150;
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #FFFFFF; /* White text for contrast */
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Additional aesthetic enhancements */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loading-spinner">
+        <svg class="spinner" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+        <p class="loading-text">Loading your study resources...</p>
+    </div>
+</body>
+</html>

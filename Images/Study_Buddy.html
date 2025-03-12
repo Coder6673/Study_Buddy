@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Study_Buddy</title>
+    <link rel="stylesheet" type="text/css" href="./Study_Buddy_files/CSSSTYLE.css">
+</head>
+<body>
+<hr>
+    <nav>
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/login.html" class="logo"> Study Buddy</a>
+        </div>  
+        <ul>
+            <li><a href="http://127.0.0.1:5500/index.html#hero">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#cards">Cards</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#footer">Footer</a></li>
+        </ul>
+    </nav>  
+
+<div class="heri" id="hero">
+    <h1>Welcome to Our Website!</h1>
+    <p>Access notes, videos, quizzes, and more to ace your exams</p>
+    <a href="http://127.0.0.1:5500/index.html#resources"><button class="cta-button">Explore Resources...</button></a>
+</div>
+<section id="resources" class="cards-container">
+    <div class="resource-card">
+      <h2>Notes</h2>
+      <p>Download comprehensive notes for all subjects.</p>
+      <a href="http://127.0.0.1:5500/notes.html" class="resource-link">View Notes</a>
+    </div>
+    <div class="resource-card">
+      <h2>Videos</h2>
+      <p>Watch tutorials and lectures to understand concepts better.</p>
+      <a href="http://127.0.0.1:5500/video_tutorial.html" class="resource-link">Watch Videos</a>
+    </div>
+    <div class="resource-card">
+      <h2>Quizzes</h2>
+      <p>Test your knowledge with interactive quizzes.</p>
+      <a href="http://127.0.0.1:5500/index.html#" class="resource-link">Take Quizzes</a>
+    </div>
+    <div class="resource-card">
+        <h2>Study Planner</h2>
+        <p> Add the task you want to accomplish!</p><br>
+        <a href="http://127.0.0.1:5500/index.html#tasks">Tasks</a>
+        <section id="planner">
+            <div id="planner-container">
+                <input type="text" id="task-input" placeholder=" ✏️ Add a task..." class="addtask">
+                <button id="add-task" class=" btn">+</button>
+            </div>
+          </section>
+    </div>
+  </section>
+        <div class="cards-container">
+
+            <div class="card" id="cards"><h2>
+                <a href="http://127.0.0.1:5500/index.html">Card 1</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/link.html">Card 2</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/www.google.com" alt="Google">Card 3</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/index.html">Card 4</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/index.html">Card 5</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/index.html">Card 6</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/index.html">Card 7</a>
+            </h2></div>
+            <div class="card"><h2>
+                <a href="http://127.0.0.1:5500/index.html">Card 8</a>
+            </h2></div>
+          <br>   <br>   <br>   <br> </div> <hr>
+          <div class="cards-container"> 
+            <h3>The schedule list is here!<br>(Click to delete an item!)</h3>
+            <ul id="tasks" class="task-list">   </ul> <!-- Tasks will appear here -->
+          </div>
+        <script src="./Study_Buddy_files/javascript.js.download"> 
+
+
+        </script>
+    <footer id="footer">
+        <p>©Study Buddy <br>
+    <a href="https://www.youtube.com/" class="ahref">YouTube</a> <br>
+    <a href="https://www.youtube.com/" class="ahref">YouTube</a> <br>
+    <a href="https://www.youtube.com/" class="ahref">YouTube</a> <br>
+    <a href="https://www.youtube.com/" class="ahref">YouTube</a> <br>
+    <a href="https://www.youtube.com/" class="ahref">YouTube</a> <br>
+</p>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
